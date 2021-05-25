@@ -15,14 +15,14 @@
 在正式开发之前，需要先搭建脚手架，无论是 Vue 还是 React，社区都有非常多成熟的解决方案，我们在构建 4.0 时选用了蚂蚁金服体验技术部开源的 umi [https://umijs.org/](https://umijs.org/)，umi 集成了 React 企业级应用开发所需的大部分依赖，默认的 webpack 配置可以非常方便的支持 Less、CSS Module、TypeScript 等主流前端技术，同时完美集成著名开源组件库 antd，微前端框架 qiankun。
 
 在具体实践上，我们针对 umi 进行了二次封装，可以让开发人员以非常简单的方式，10行代码不到快速搭建一个微应用，利用 umi 的插件系统，我们重写了 i18n、sourcemap 等插件，使之能完美适配微前端架构。
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/94fa95d9-bdb6-4ae9-a2df-b06b3d41d585/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/94fa95d9-bdb6-4ae9-a2df-b06b3d41d585/Untitled.png)
+![https://github.com/mango-lzp/notes/blob/main/img/%E6%96%87%E4%BB%B6%E5%88%97%E8%A1%A8.png?raw=true](https://github.com/mango-lzp/notes/blob/main/img/%E6%96%87%E4%BB%B6%E5%88%97%E8%A1%A8.png?raw=true)
 
 ## 组件化
 
 在升级 4.0 之后，大家会发现界面焕然一新，交互方式也更为多样，以云主机创建为例，不仅有多步创建，还有快捷创建，创建页面利用了大量基础组件，如输入框、开关按钮、下拉框、抽屉、标签页等，更为有趣的是，整个创建页也是一个大组件，封装了步骤条、数据收集、校验等功能，同时云主机的创建页还用在了引导页、工单、资源编排等页面。
 
 良好的架构一定是用最少的代码去支撑尽可能多的功能，在正式开发业务代码之前，架构团队和设计团队耗时两个月针对几类常见页面，列表、表格、详情页、图表页的共同特征，抽象出 24 个常用组件，为了在一开始就能支持多主题切换，对于色彩和图标上也进行了深度封装。
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ef92df5-deb6-41d5-bd07-e60f969d514f/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ef92df5-deb6-41d5-bd07-e60f969d514f/Untitled.png)
+![https://github.com/mango-lzp/notes/blob/main/img/4.0UI%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6.png?raw=true](https://github.com/mango-lzp/notes/blob/main/img/4.0UI%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6.png?raw=true)
 
 ## 强类型
 
@@ -78,21 +78,20 @@ Hooks 的隔离性可以非常方便的进行逻辑复用，以云主机举例�
 ## 微前端
 
 当代码量达到 10 万行以上时，单纯的采用远程开发，增加机器内存已经很难提升编译速度，解决一个复杂问题，最好的办法是分治，把问题切割成若干小份进行解决，而微前端就是目前业界最流行的超大项目解决方案。微前端只是一个概念，在具体实现上可以采用多页、IFrame、单页等，多页和 IFrame 在加载不同应用时都会造成页面刷新卡顿，用户体验不好，为了追求极致的用户体验，只能采用 Single-SPA 的方式。Single-SPA 和基于 React 的 SPA 不同点在于多了一层路由拦截，即先拦截第一层去加载不同的应用，当应用加载完毕后再利用 React-Router 等加载具体的页面。在前文中提到了 4.0 采用了基于 Single-SPA 的企业级微前端框架 Qiankun，笔者是 Qiankun 最早的开发和维护者，Qiankun 在 Single-SPA 的基础上增加了两个核心功能，import-html-entry 和 sandbox，前者用于子应用构建产物 html、js、css 的加载，后者则是利用 Proxy 做主子应用以及应用间的状态隔离。Qiankun 目前仍在迭代，没有一定源码修改功底建议不要尝试。
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a8046d8d-48de-461f-a7a9-d5d7dbb477c8/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a8046d8d-48de-461f-a7a9-d5d7dbb477c8/Untitled.png)
+![https://github.com/mango-lzp/notes/blob/main/img/%E6%9E%B6%E6%9E%84%E5%9B%BE%E8%A7%A3.png?raw=true](https://github.com/mango-lzp/notes/blob/main/img/%E6%9E%B6%E6%9E%84%E5%9B%BE%E8%A7%A3.png?raw=true)
 
 ## 低代码
 随着项目的顺利进行，代码编写速度在不断加快，不过一些问题也暴露出来，由于开发人员的水平差异，编写的页面，特别是列表页缺乏统一的规范，列宽定义随意，常量没有做很好的转换，用的颜色、图标不对，表格应该展现哪些列、顺序如何定义并没有一个权威的信息源。类似这样的问题还有一个页面应该放哪些按钮、这些按钮在什么权限下展示、界面的文字如果是多语言如何编辑、多主题时色彩如何定义，这些问题很难用文字来表述清楚，同时不同团队角色对问题的理解也缺乏一致，单单一个按钮放在什么位置，在什么权限下显示，显示文字是什么样，交互形式又如何，就涉及到 PM、设计师、文档、测试等多个团队，最后还需要开发人员进行编码解决，如果没有一个很好的沟通方式，势必陷入前期混战，后期扯皮的不利境况，这样开发人员就会在非技术问题上浪费大量时间。
 
 为了解决跨前端协作的问题，我们采用了两种方式解决，钉钉配置表和配置系统，钉钉的 Excel 表是一个很好的多人协作平台，我们只需要约定一个资源所有的展现形式，就可以根据配置表自动生成代码，如下图所示。
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7a6da71c-8e02-4528-ba6e-0c2249ee9777/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7a6da71c-8e02-4528-ba6e-0c2249ee9777/Untitled.png)
+![https://github.com/mango-lzp/notes/blob/main/img/%E4%BD%8E%E4%BB%A3%E7%A0%81excel.png?raw=true](https://github.com/mango-lzp/notes/blob/main/img/%E4%BD%8E%E4%BB%A3%E7%A0%81excel.png?raw=true)
 
 而配置系统一开始是为了解决界面文字的国际化问题，后来发现权限控制等也可以采用配置系统解决。我们创新性的在 UI 界面上增加了一个 Debug 模式，当开启 Debug 时，会标记页面中所有可以进行权限控制的元素，鼠标悬浮上去就可以跳转到配置系统供 PM 和 测试人员进行配置。
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/acfbe01a-0a2e-4067-b90b-2c4ac71f503e/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/acfbe01a-0a2e-4067-b90b-2c4ac71f503e/Untitled.png)
-
+![https://github.com/mango-lzp/notes/blob/main/img/debug%E6%A8%A1%E5%BC%8F.png?raw=true](https://github.com/mango-lzp/notes/blob/main/img/debug%E6%A8%A1%E5%BC%8F.png?raw=true)
 而针对国际化，我们用 Babel AST 解析代码中所有的 formatMessage 标记，将初始 key 和默认中文导入 i18n 系统，最后再由翻译人员进行完善，翻译完毕后再通过 CI 系统拉取并进行打包。
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/606e587f-bf23-4e01-839c-9ba953b3bb67/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/606e587f-bf23-4e01-839c-9ba953b3bb67/Untitled.png)
+![https://github.com/mango-lzp/notes/blob/main/img/%E9%85%8D%E7%BD%AE%E7%B3%BB%E7%BB%9F.png?raw=true](https://github.com/mango-lzp/notes/blob/main/img/%E9%85%8D%E7%BD%AE%E7%B3%BB%E7%BB%9F.png?raw=true)
 
 目前自动生成的代码约为 1**5万行**，占整个 UI 代码的 1/4，却完成了界面中所有的列表、按钮显示，权限控制、主题切换、多语言切换等功能，这些是各团队共同协作的结晶。
 
