@@ -114,13 +114,24 @@ class LinkedList{
   }
 
   public reverse() {
-    
+    // 无节点，无需反转
+    if(this.head.next === this.end) return
+
+    let cur = this.head.next!
+    // 把第一个节点的前驱和最后一个节点的后继互换。
+    //  [firstNode.pre,lastNode.next]  =  [this.end, this.head], 之后在while 循环中前驱后继会互换
+    ;[this.head.next!.pre, this.end.pre!.next] = [this.end, this.head]
+    ;[this.head.next, this.end.pre] = [this.end.pre, this.head.next]
+
+    while(cur.pre !== null){
+      [cur.next, cur.pre] = [cur.pre, cur.next]
+      cur = cur.pre as LinkedListNode
+    }
   }
 }
 
 const ll1 = new LinkedList([1, 2, 3, 5])
 // ll1.remove(5)
 // ll1.remove(6)
-ll1.remove(ll1.find('head') as LinkedListNode)
+ll1.reverse()
 console.log(ll1.showList())
-console.log(ll1.showList(true))
