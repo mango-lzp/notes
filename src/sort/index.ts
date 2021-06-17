@@ -21,18 +21,34 @@ const merge = (arr1: number[], arr2: number[]) => {
 
 // 归并排序
 const merge_sort = (arr: number[]) => {
-  const _merge_sort = (arr: number[], startIndex: number, endIndex: number) => {
-    if(startIndex >= endIndex) return [arr[endIndex]]
+  const _merge_sort = (_arr: number[], startIndex: number, endIndex: number) => {
+    if(startIndex >= endIndex) return [_arr[endIndex]]
   
     const middleIndex = Math.floor((endIndex + startIndex) / 2)
   
-    return merge(_merge_sort(arr, startIndex, middleIndex), _merge_sort(arr, middleIndex + 1, endIndex))
+    return merge(_merge_sort(_arr, startIndex, middleIndex), _merge_sort(_arr, middleIndex + 1, endIndex))
   }
+
   return _merge_sort(arr, 0, arr.length - 1)
 }
 
+const quick_sort = (arr: number[]) => {
+  if(arr.length <= 1) return arr
+  const index = Math.floor(arr.length / 2)
+
+  const point = arr.splice(index, 1)[0]
+  const less = arr.filter(v => v <= point)
+  const greater = arr.filter(v => v > point)
+  
+  return [...quick_sort(less), point, ...quick_sort(greater)]
+
+  // 原地快排（不占用额外内存）
+
+  // xx
+}
 
 export {
   merge,
-  merge_sort
+  merge_sort,
+  quick_sort
 }
