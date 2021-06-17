@@ -5,8 +5,10 @@
   "repository": "git@github.com:mango-lzp/notes.git",
   "author": "“mango.lin” <mango_lzp@163.com>",
   "scripts": {
-    "start": "ts-node Linked-list/index",
-    "single": "ts-node Linked-list/single"
+    "start": "ts-node src/linked-list/index",
+    "single": "ts-node src/linked-list/single",
+    "sort": "ts-node src/sort/index",
+    "sort-test": "ts-node src/sort/index.spec"
   },
   "license": "MIT",
   "dependencies": {},
