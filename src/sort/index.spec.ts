@@ -21,7 +21,6 @@ const testQuickSort = () => {
   console.time('quick-sort')
   const arr = [1,2,6,10,8,5]
   const result = quick_sort(arr).toString() === '1,2,5,6,8,10'
-  console.log(quick_sort(arr).toString(), result)
   result ? console.log('quick-sort pass') : console.error('quick-sort failed')
   console.timeEnd('quick-sort')
 }
