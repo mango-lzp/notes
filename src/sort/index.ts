@@ -42,9 +42,19 @@ const quick_sort = (arr: number[]) => {
   
   return [...quick_sort(less), point, ...quick_sort(greater)]
 
-  // 原地快排（不占用额外内存）
-
-  // xx
+  // 原地快排（不占用额外内存,非稳定排序）
+  // if(arr.length <= 1) return arr
+  // const index = Math.floor(arr.length / 2)
+  // const point = arr[index]
+  // let j = 0
+  // for(let i = 0; i < arr.length; i++){
+  //   if(arr[i] < point){
+  //     // 从j=0开始交换，j下标之前的，都是比point小的
+  //     [arr[j], arr[i]] = [arr[i], arr[j]]
+  //     j++
+  //   }
+  // }
+  // return [...quick_sort(arr.slice(0, j)), point, ...quick_sort(arr.slice(j + 1, arr.length))]
 }
 
 export {
