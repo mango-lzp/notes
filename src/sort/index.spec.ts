@@ -1,4 +1,4 @@
-import { merge, merge_sort, quick_sort } from './index'
+import { merge, merge_sort, quick_sort,insert_sort } from './index'
 
 const testMerge = () => {
   const arr1 = [1, 2, 3, 8, 9, 15]
@@ -25,3 +25,12 @@ const testQuickSort = () => {
   console.timeEnd('quick-sort')
 }
 testQuickSort()
+
+const testInsertSort = () => {
+  console.time('insert-sort')
+  const arr = [1,2,6,10,8,5]
+  const result = insert_sort(arr).toString() === '1,2,5,6,8,10'
+  result ? console.log('insert-sort pass') : console.error('insert-sort failed')
+  console.timeEnd('insert-sort')
+}
+testInsertSort()

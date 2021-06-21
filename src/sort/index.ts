@@ -32,6 +32,7 @@ const merge_sort = (arr: number[]) => {
   return _merge_sort(arr, 0, arr.length - 1)
 }
 
+// 快速排序   nlogn
 const quick_sort = (arr: number[]) => {
   if(arr.length <= 1) return arr
   const index = Math.floor(arr.length / 2)
@@ -57,8 +58,37 @@ const quick_sort = (arr: number[]) => {
   // return [...quick_sort(arr.slice(0, j)), point, ...quick_sort(arr.slice(j + 1, arr.length))]
 }
 
+// 有序度是数组中具有有序关系的元素对的个数。
+// 2,4,3,1,5,6 这组数据的有序度为11.
+// 冒泡排序的交换次数为逆序度。
+// 插入排序移动元素的次数也为逆序度
+// 但冒泡排序需要三个赋值操作（元素交换）
+// 插入排序只需要一个。
+// 插入排序. n^2
+const insert_sort = (arr: number[]) => {
+  if(arr.length <= 1) return arr
+
+  for(let i = 1; i < arr.length; i++){
+    let j = i - 1
+    let val = arr[i]
+    while(j >= 0){
+      if(arr[j] > val){
+        arr[j+1] = arr[j--]
+      } else {
+        break
+      }
+    }
+    //j自减，需要+1
+    arr[j+1] = val
+  }
+  return arr
+}
+
+//选择排序，每次选出最小的，交换位置。
+
 export {
   merge,
   merge_sort,
-  quick_sort
+  quick_sort,
+  insert_sort
 }
