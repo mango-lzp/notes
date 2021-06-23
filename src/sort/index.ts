@@ -86,6 +86,8 @@ const insert_sort = (arr: number[]) => {
 
 //选择排序，每次选出最小的，交换位置。
 
+// Array.prototype.sort在数组长度26以下会用插入排序，26以上用快速排序
+
 export {
   merge,
   merge_sort,
