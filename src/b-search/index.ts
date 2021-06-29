@@ -19,6 +19,23 @@ const bsearch = (arr: number[], target: number) => {
   return _bsearch(arr, target)
 }
 
-let arr = [1,2,3,5,8,9,15,60]
+const bsearch_nice = (arr: number[], target: number) => {
 
-bsearch(arr, 5)
+  const _bsearch = (low: number, high: number, target: number) => {
+    if(low > high) return -1
+    
+    let mid = Math.floor(low + (high - low)/2)
+    if(arr[mid] === target) return mid
+
+    return arr[mid] < target ? _bsearch(mid + 1, high, target) : _bsearch(low, mid - 1, target)
+  }
+  return _bsearch(0, arr.length -1, target)
+}
+
+let arr = [1,2,3,5,8,9,15,60]
+console.time('bsearch')
+console.log(bsearch(arr, 60))
+console.time('bsearch_nice')
+console.timeEnd('bsearch')
+console.log(bsearch_nice(arr, 60))
+console.timeEnd('bsearch_nice')
