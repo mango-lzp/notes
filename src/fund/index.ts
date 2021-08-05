@@ -39,5 +39,8 @@ const TencentCAGR3 = getCAGR_By_Price(420, ...Tencent)
 const TenCentPriceLow = getIndex(TencentCAGR3, ...Tencent)
 const TenCentPriceHigh = getIndex(TencentCAGR2, ...Tencent)
 
-console.log(IndexUp, IndexMid, IndexDown)
-console.log(TencentCAGR3, TencentCAGR2, TenCentPriceLow, TenCentPriceHigh)
+console.table([IndexUp, IndexMid, IndexDown])
+console.table([
+  [TencentCAGR3, TenCentPriceLow],
+  [TencentCAGR2, TenCentPriceHigh]
+])
