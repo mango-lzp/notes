@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+      table {
+        border-top: 1px solid;
+        border-left: 1px solid;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+      td {
+        border-bottom: 1px solid;
+        border-right: 1px solid;
+        padding: 10px 10px;
+      }
+      #node-report {
+        margin-bottom: 10px;
+      }
+      h3,#node-report,#e2e-report {
+        text-align: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <script>
+      window.onload = () => {
+        
+        document.querySelector('#node-report #bowen\\.sun').addEventListener('click', () => {
+          const tableNode = document.querySelector('#node-report #bowen\\.sun-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        
+        document.querySelector('#e2e-report #dongqing\\.wei').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #dongqing\\.wei-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #qi\\.wei').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #qi\\.wei-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #sunbowen').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #sunbowen-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #wenhao\\.chen').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #wenhao\\.chen-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #huaike\\.yin').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #huaike\\.yin-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #xing\\.xie').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #xing\\.xie-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #yu\\.duan').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #yu\\.duan-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #yang').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #yang-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #mango').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #mango-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #chaokun\\.qian').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #chaokun\\.qian-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #tking').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #tking-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #dengbo').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #dengbo-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+        document.querySelector('#e2e-report #guozhao\\.qi').addEventListener('click', () => {
+          const tableNode = document.querySelector('#e2e-report #guozhao\\.qi-table')
+          if(tableNode.getAttribute('style')){
+            tableNode.setAttribute('style', '')
+          } else {
+            tableNode.setAttribute('style', 'display: none')
+          }
+        })
+      }
+    </script>
+    <div id='root'>
+      <h3>Node 测试报告 (4)</h3>
+      <div id='node-report'>
+        <ul id=bowen.sun>
+          bowen.sun (4)
+        </ul>
+        <table id='bowen.sun-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>日志服务器 删除日志服务器</td>
+            <td>./test/features/log-server/delete/success.e2e-spec.ts</td>
+          </tr><tr>
+            <td>日志服务器 创建日志服务器</td>
+            <td>./test/features/log-server/create/success.e2e-spec.ts</td>
+          </tr><tr>
+            <td>日志服务器 更新日志服务器</td>
+            <td>./test/features/log-server/update/success.e2e-spec.ts</td>
+          </tr><tr>
+            <td>预配置模板 2. 查询系统自带的的预配置模板</td>
+            <td>./test/features/preconfigtemplate/success.e2e-spec.ts</td>
+          </tr>
+        </table>
+      </div>
+      <h3>e2e 测试报告 (88)</h3>
+      <div id='e2e-report'>
+        <ul id=dongqing.wei>
+          dongqing.wei (25)
+        </ul>
+        <table id='dongqing.wei-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>查询通知对象 主列表筛选类型</td>
+            <td>cypress/integration/cloud-monitoring/zwatch-endpoint/query/index.spec.ts</td>
+          </tr><tr>
+            <td>资源分组添加移除通知对象 移除通知对象</td>
+            <td>cypress/integration/cloud-monitoring/monitor-group/action/add-remove-endpoint.spec.ts</td>
+          </tr><tr>
+            <td>添加镜像服务器 添加镜像服务器-镜像仓库类型</td>
+            <td>cypress/integration/hardware/backup-storage/action/create.spec.ts</td>
+          </tr><tr>
+            <td>查询Ceph镜像服务器监控节点 列表筛选</td>
+            <td>cypress/integration/hardware/backup-storage/action/monitor-node/query.spec.ts</td>
+          </tr><tr>
+            <td>查询Ceph镜像服务器监控节点 搜索</td>
+            <td>cypress/integration/hardware/backup-storage/action/monitor-node/query.spec.ts</td>
+          </tr><tr>
+            <td>查询区域 主列表筛选-启用状态</td>
+            <td>cypress/integration/hardware/zone/query/index.spec.ts</td>
+          </tr><tr>
+            <td>查询区域 搜索-名称</td>
+            <td>cypress/integration/hardware/zone/query/index.spec.ts</td>
+          </tr><tr>
+            <td>查询区域 搜索-UUID</td>
+            <td>cypress/integration/hardware/zone/query/index.spec.ts</td>
+          </tr><tr>
+            <td>查询亲和组 主列表筛选</td>
+            <td>cypress/integration/virtual-resource/affinity-group/query/query.spec.ts</td>
+          </tr><tr>
+            <td>查询亲和组 搜索-名称</td>
+            <td>cypress/integration/virtual-resource/affinity-group/query/query.spec.ts</td>
+          </tr><tr>
+            <td>查询亲和组 搜索-UUID</td>
+            <td>cypress/integration/virtual-resource/affinity-group/query/query.spec.ts</td>
+          </tr><tr>
+            <td>查询亲和组 搜索-组合</td>
+            <td>cypress/integration/virtual-resource/affinity-group/query/query.spec.ts</td>
+          </tr><tr>
+            <td>查询云盘规格 主列表筛选-启用状态</td>
+            <td>cypress/integration/virtual-resource/disk-offering/query/index.spec.ts</td>
+          </tr><tr>
+            <td>查询云盘规格 主列表筛选-共享模式</td>
+            <td>cypress/integration/virtual-resource/disk-offering/query/index.spec.ts</td>
+          </tr><tr>
+            <td>查询云盘规格 搜索-名称</td>
+            <td>cypress/integration/virtual-resource/disk-offering/query/index.spec.ts</td>
+          </tr><tr>
+            <td>查询云盘规格 搜索-UUID</td>
+            <td>cypress/integration/virtual-resource/disk-offering/query/index.spec.ts</td>
+          </tr><tr>
+            <td>添加镜像 添加镜像-ZSTAC-42001</td>
+            <td>cypress/integration/virtual-resource/image/action/add-image.spec.ts</td>
+          </tr><tr>
+            <td>查询镜像 主列表和详情页-没有支持弹性裸金属字段</td>
+            <td>cypress/integration/virtual-resource/image/query/query-iam2.spec.ts</td>
+          </tr><tr>
+            <td>查询镜像 主列表筛选平台</td>
+            <td>cypress/integration/virtual-resource/image/query/query.spec.ts</td>
+          </tr><tr>
+            <td>查询镜像 主列表筛选启用状态</td>
+            <td>cypress/integration/virtual-resource/image/query/query.spec.ts</td>
+          </tr><tr>
+            <td>查询镜像 主列表筛选CPU架构</td>
+            <td>cypress/integration/virtual-resource/image/query/query.spec.ts</td>
+          </tr><tr>
+            <td>查询镜像 主列表筛选镜像类型</td>
+            <td>cypress/integration/virtual-resource/image/query/query.spec.ts</td>
+          </tr><tr>
+            <td>查询镜像 主列表筛选支持弹性裸金属</td>
+            <td>cypress/integration/virtual-resource/image/query/query.spec.ts</td>
+          </tr><tr>
+            <td>查询镜像 搜索-名称</td>
+            <td>cypress/integration/virtual-resource/image/query/query.spec.ts</td>
+          </tr><tr>
+            <td>查询镜像 搜索-UUID</td>
+            <td>cypress/integration/virtual-resource/image/query/query.spec.ts</td>
+          </tr>
+        </table><ul id=qi.wei>
+          qi.wei (2)
+        </ul>
+        <table id='qi.wei-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>创建备份任务(数据库) 创建数据库备份任务——按周备份,本地备份数据库[image-store-bs-1,image-store-bs-3],保留7份</td>
+            <td>cypress/integration/backup-management/backup-job/database/action/create/create-database-backup-job.spec.ts</td>
+          </tr><tr>
+            <td>创建备份任务(数据库) 创建数据库备份任务——按周备份,本地备份数据库[image-store-bs-1],保留8份</td>
+            <td>cypress/integration/backup-management/backup-job/database/action/create/create-database-backup-job.spec.ts</td>
+          </tr>
+        </table><ul id=sunbowen>
+          sunbowen (4)
+        </ul>
+        <table id='sunbowen-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>编辑组织架构 编辑组织架构</td>
+            <td>cypress/integration/enterprise-management/organization/action/edit.spec.ts</td>
+          </tr><tr>
+            <td>编辑工单流程 列表单个编辑</td>
+            <td>cypress/integration/enterprise-management/process-management/action/edit-process-management.spec.ts</td>
+          </tr><tr>
+            <td>操作日志 1. 查看操作日志</td>
+            <td>cypress/integration/platform-om/message-log/operation-log/query.spec.ts</td>
+          </tr><tr>
+            <td>子账号管理-删除 删除子账户-单个-详情页</td>
+            <td>cypress/integration/settings/account-information/action/delete.spec.ts</td>
+          </tr>
+        </table><ul id=wenhao.chen>
+          wenhao.chen (2)
+        </ul>
+        <table id='wenhao.chen-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>资源报警器 查询</td>
+            <td>cypress/integration/cloud-monitoring/zwatch-alarm/resource/query/index.spec.ts</td>
+          </tr><tr>
+            <td>集群 row-action-编辑</td>
+            <td>cypress/integration/hardware/cluster/action/edit.spec.ts</td>
+          </tr>
+        </table><ul id=huaike.yin>
+          huaike.yin (21)
+        </ul>
+        <table id='huaike.yin-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>项目 详情页设置项目负责人</td>
+            <td>cypress/integration/enterprise-management/project/action/set-iam2-project-admin.spec.ts</td>
+          </tr><tr>
+            <td>项目 详情页添加项目成员</td>
+            <td>cypress/integration/enterprise-management/project/action/add-virtual-ids.spec.ts</td>
+          </tr><tr>
+            <td>查询VGPU规格 过滤共享模式</td>
+            <td>cypress/integration/virtual-resource/gpu-spec/query/query-vgpu-device-spec.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 亲和组--反亲和组(非强制)</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 CPU绑定</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 虚拟光驱</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 GPU加载方式---指定规格(物理机GPU)--不自动释放GPU设备</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 GPU加载方式---指定规格(物理机GPU)--自动释放GPU设备</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 GPU加载方式-----指定规格(vGPU)--不自动释放GPU设备</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 GPU加载方式-----指定规格(vGPU)--自动释放GPU设备</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 GPU加载方式-----指定设备--GPU设备</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 GPU加载方式-----指定设备--vGPU设备</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 设置高可用</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 资源优先级</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 控制台密码</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 SSH登录方式--SSH密钥</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 SSH登录方式--SSH密码</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 userData</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 控制台模式</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>创建云主机--高级参数 标签</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-advance.spec.ts</td>
+          </tr><tr>
+            <td>设置云主机GPU规格 取消vGPU规格</td>
+            <td>cypress/integration/virtual-resource/vm/action/set-vm-gpu-spec.spec.ts</td>
+          </tr>
+        </table><ul id=xing.xie>
+          xing.xie (7)
+        </ul>
+        <table id='xing.xie-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>创建自定义工单流程--工单类型：申请云主机 流程设置：确定</td>
+            <td>cypress/integration/enterprise-management/ticket/fullcase/create-custom-ticket-process-createvm.spec.ts</td>
+          </tr><tr>
+            <td>创建自定义工单流程--工单类型：删除云主机 流程设置：确定</td>
+            <td>cypress/integration/enterprise-management/ticket/fullcase/create-custom-ticket-process-deletevm.spec.ts</td>
+          </tr><tr>
+            <td>创建自定义工单流程--工单类型：删除云主机 流程设置：确定</td>
+            <td>cypress/integration/enterprise-management/ticket/fullcase/create-custom-ticket-process-updatevm.spec.ts</td>
+          </tr><tr>
+            <td>我的工单-创建 修改项目配额 网络资源</td>
+            <td>cypress/integration/enterprise-management/ticket/fullcase/update-project.spec.ts</td>
+          </tr><tr>
+            <td>我的工单-创建 修改云主机配置cpu ram</td>
+            <td>cypress/integration/enterprise-management/ticket/fullcase/update-vm-cpu-ram.spec.ts</td>
+          </tr><tr>
+            <td>防火墙-规则-查询 按名称排序</td>
+            <td>cypress/integration/network-service/vpc-firewall/rule/query.spec.ts</td>
+          </tr><tr>
+            <td>防火墙-规则-查询 按名称过滤</td>
+            <td>cypress/integration/network-service/vpc-firewall/rule/query.spec.ts</td>
+          </tr>
+        </table><ul id=yu.duan>
+          yu.duan (4)
+        </ul>
+        <table id='yu.duan-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>我的工单-创建 修改云主机配置</td>
+            <td>cypress/integration/enterprise-management/ticket/update-vm-config.spec.ts</td>
+          </tr><tr>
+            <td>防火墙-规则集-同步配置 列表页 row 同步配置</td>
+            <td>cypress/integration/network-service/vpc-firewall/rule-set/sync-config.spec.ts</td>
+          </tr><tr>
+            <td>快照-恢复 云主机快照-列表页恢复</td>
+            <td>cypress/integration/virtual-resource/snapshot/revert.spec.ts</td>
+          </tr><tr>
+            <td>快照-恢复 云主机快照-详情页恢复</td>
+            <td>cypress/integration/virtual-resource/snapshot/revert.spec.ts</td>
+          </tr>
+        </table><ul id=yang>
+          yang (1)
+        </ul>
+        <table id='yang-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>Lisence 查看授权记录</td>
+            <td>cypress/integration/main/about/action/show-record.spec.ts</td>
+          </tr>
+        </table><ul id=mango>
+          mango (2)
+        </ul>
+        <table id='mango-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>VpcHa删除 delete VpcHaGroup in Detail</td>
+            <td>cypress/integration/network-resource/vpc-ha-group/action/delete.spec.ts</td>
+          </tr><tr>
+            <td>编辑VPC路由器高可用组 Update vpcHaGroup in detail</td>
+            <td>cypress/integration/network-resource/vpc-ha-group/action/update.spec.ts</td>
+          </tr>
+        </table><ul id=chaokun.qian>
+          chaokun.qian (6)
+        </ul>
+        <table id='chaokun.qian-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>vpc-fullcase-网络 批量加载VPC网络</td>
+            <td>cypress/integration/network-resource/vpc-vrouter/fullcase/network.spec.ts</td>
+          </tr><tr>
+            <td>应用中心 添加应用中心-全局共享</td>
+            <td>cypress/integration/operational-management/application-center/action/add-application.spec.ts</td>
+          </tr><tr>
+            <td>云主机创建--基础设置 创建云主机--多台云主机--不选云盘规格</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-basic.spec.ts</td>
+          </tr><tr>
+            <td>云主机创建--基础设置 创建云主机--多台云主机--选云盘规格</td>
+            <td>cypress/integration/virtual-resource/vm/action/create-vm-basic.spec.ts</td>
+          </tr><tr>
+            <td>Visualization Host Visualization all Visualization data</td>
+            <td>cypress/integration/visualization/performance-analysis/host.spec.ts</td>
+          </tr><tr>
+            <td>Visualization VmInstance Visualization mock VM data</td>
+            <td>cypress/integration/visualization/performance-analysis/vm-instance.spec.ts</td>
+          </tr>
+        </table><ul id=tking>
+          tking (7)
+        </ul>
+        <table id='tking-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>挂载本地子网 挂载</td>
+            <td>cypress/integration/network-service/ipsec-tunnel/local-cidr/local-cidr.spec.ts</td>
+          </tr><tr>
+            <td>路由条目 创建 详情 主列表, type = 静态路由</td>
+            <td>cypress/integration/network-service/route-table/route-entry/create.spec.ts</td>
+          </tr><tr>
+            <td>路由表 vpc路由器:主列表 detach</td>
+            <td>cypress/integration/network-service/route-table/vrouter/detach/detach.spec.ts</td>
+          </tr><tr>
+            <td>账单 账户 admin: Row</td>
+            <td>cypress/integration/operational-management/billing-management/bills/account/query.spec.ts</td>
+          </tr><tr>
+            <td>计费价目绑定项目和账户 项目</td>
+            <td>cypress/integration/operational-management/billing-management/pricing-list/account/account.spec.ts</td>
+          </tr><tr>
+            <td>计费价目历史: query 删除 Row</td>
+            <td>cypress/integration/operational-management/billing-management/pricing-list/history/history.spec.ts</td>
+          </tr><tr>
+            <td>计费价目: 创建 GPU Item: 桌面显卡</td>
+            <td>cypress/integration/operational-management/billing-management/pricing-list/create.spec.ts</td>
+          </tr>
+        </table><ul id=dengbo>
+          dengbo (6)
+        </ul>
+        <table id='dengbo-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>彻底删除云主机 主列表toolbar彻底删除云主机</td>
+            <td>cypress/integration/virtual-resource/vm/action/expunge-vm.spec.ts</td>
+          </tr><tr>
+            <td>彻底删除云主机 主列表row彻底删除云盘</td>
+            <td>cypress/integration/virtual-resource/vm/action/expunge-vm.spec.ts</td>
+          </tr><tr>
+            <td>彻底删除云主机 详情页彻底删除云主机</td>
+            <td>cypress/integration/virtual-resource/vm/action/expunge-vm.spec.ts</td>
+          </tr><tr>
+            <td>修改云主机计算规格 主列表修改云主机计算规格</td>
+            <td>cypress/integration/virtual-resource/vm/action/modify-instanceOffering.spec.ts</td>
+          </tr><tr>
+            <td>修改云主机计算规格 详情页修改云主机计算规格</td>
+            <td>cypress/integration/virtual-resource/vm/action/modify-instanceOffering.spec.ts</td>
+          </tr><tr>
+            <td>修改云主机计算规格 批量修改云主机计算规格</td>
+            <td>cypress/integration/virtual-resource/vm/action/modify-instanceOffering.spec.ts</td>
+          </tr>
+        </table><ul id=guozhao.qi>
+          guozhao.qi (1)
+        </ul>
+        <table id='guozhao.qi-table' style='display: none' border='1' cellspacing='0'>
+          <tr>
+            <td>本地AccessKey 生成本地AccessKey</td>
+            <td>cypress/integration/access-control/accesskey-management/action/success.spec.ts</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
