@@ -88,9 +88,32 @@ const insert_sort = (arr: number[]) => {
 
 // Array.prototype.sort在数组长度26以下会用插入排序，26以上用快速排序
 
+
+// 计数排序
+const count_sort = (arr: number[]) => {
+  const max = Math.max(...arr)
+  const c = new Array(max + 1).fill(0)
+
+  // 计数
+  arr.forEach(i => c[i] ? c[i] += 1 : c[i] = 1)
+
+  // 计数求和
+  for(let i = 1; i < c.length; i++) {
+    c[i] = c[i] + c[i-1]
+  }
+
+  const result = []
+  // 倒序遍历，保证排序的稳定性
+  for(let i = arr.length -1; i >= 0; i--) {
+    result[ --c[arr[i]] ] = arr[i]
+  }
+  return result
+}
+
 export {
   merge,
   merge_sort,
   quick_sort,
-  insert_sort
+  insert_sort,
+  count_sort
 }
